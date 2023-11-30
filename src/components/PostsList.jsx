@@ -9,7 +9,7 @@ export default function PizzasList() {
     return (
         <div className="row">
             {listaPost.map((post, i) => {
-                return <div className="col-4 text-center">
+                return <div key={"post_" + i} className="col-4 text-center">
                     <div class="card bg-light my-2">
                         <img className={style.card_img} src={getImgUrl(post.image)} alt="Card image cap"></img>
                         <div class="card-body">
@@ -21,7 +21,7 @@ export default function PizzasList() {
                             <span><strong>Tags:</strong></span>
                             <ul>
                                 {post.tags.map((tag, i) => {
-                                    return <li>{tag.name}</li>
+                                    return <li key={"tag_" + i}>{tag.name}</li>
                                 })}
                             </ul>
                         </div>

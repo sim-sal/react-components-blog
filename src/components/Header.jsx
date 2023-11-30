@@ -23,7 +23,7 @@ export default function Header() {
     return (
         <header className={style.header}>
             <div className={style.logo_title}>
-                <h1>Il mio blog</h1>
+                <h1>Un blog spaziale</h1>
                 <img src="/logo.svg" alt="" />
             </div>
 
