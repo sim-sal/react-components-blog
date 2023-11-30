@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import PizzasList from './components/PostsList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +10,9 @@ function App() {
     <>
       <Header />
       <main>
-        Lista post
+        <div className="container my-5">
+          <PizzasList />
+        </div>
       </main>
       <Footer />
     </>
