@@ -6,7 +6,7 @@ export default function PizzasList() {
         <div className="row">
             {listaPost.map((post, i) => {
                 return <div className="col-4 text-center">
-                    <div class="card my-2">
+                    <div class="card bg-light my-2">
                         <img className={style.card_img} src={new URL('../assets/imgs/' + post.image, import.meta.url).href} alt="Card image cap"></img>
                         <div class="card-body">
                             <div class="card-title">
