@@ -1,13 +1,17 @@
 import style from "../css/modules/PostsList.module.scss"
 import listaPost from "../posts.json"
 
+function getImgUrl(name) {
+    return new URL('../assets/imgs/' + name, import.meta.url).href;
+}
+
 export default function PizzasList() {
     return (
         <div className="row">
             {listaPost.map((post, i) => {
                 return <div className="col-4 text-center">
                     <div class="card bg-light my-2">
-                        <img className={style.card_img} src={new URL('../assets/imgs/' + post.image, import.meta.url).href} alt="Card image cap"></img>
+                        <img className={style.card_img} src={getImgUrl(post.image)} alt="Card image cap"></img>
                         <div class="card-body">
                             <div class="card-title">
                                 <h3>{post.title}</h3>
